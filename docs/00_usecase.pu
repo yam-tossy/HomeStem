@@ -8,4 +8,6 @@ user -right-> UC1
 actor "Home Stem" as hs
 hs -left->UC1
 
+actor "Sensor" as sensor
+hs <-- sensor
 @enduml
