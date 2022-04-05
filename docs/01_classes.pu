@@ -1,0 +1,20 @@
+@startuml
+
+class HomeStem{
+
+}
+abstract Sensor{
+  +sense()
+}
+
+HomeStem o-- Sensor : monitor >
+
+' abstract Device{
+'   +connect()
+' }
+
+' abstract InputDevice{
+'   +retrieve()
+' }
+
+@enduml
