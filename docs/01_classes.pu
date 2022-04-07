@@ -3,12 +3,23 @@
 class HomeStem{
 
 }
+abstract Device{
+  +init()
+}
+abstract InputDevice{
+  +retrieve()
+}
 abstract Sensor{
-  +sense()
+  #sense()
+}
+class HygrothermoSensor{
+  #sense()
 }
 
-HomeStem o-- Sensor : monitor >
-
+HomeStem o-- InputDevice : collect <
+Device <|-- InputDevice
+InputDevice <|-- Sensor
+Sensor <|-- HygrothermoSensor
 ' abstract Device{
 '   +connect()
 ' }
